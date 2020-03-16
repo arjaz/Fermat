@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Fermat</string>
+    <string name="title">Fermat\'s Factorization</string>
+    <string name="equation">a * b =</string>
+    <string name="hint_input">Integer number</string>
+    <string name="solve">Solve</string>
+</resources>

@@ -12,13 +12,15 @@ class MainActivity : AppCompatActivity() {
 
         solveButton.setOnClickListener {
             if (inputIntEditText.text.isNotEmpty()) {
-                Log.d("userspace", "SHIT")
-                // val (a, b) = factorize(inputIntEditText.text.toString().toInt())
-                // aTextView.text = a.toString()
-                // bTextView.text = b.toString()
-                val pare = factorize(inputIntEditText.text.toString().toInt())
-                aTextView.text = "a = " + pare.first.toString()
-                bTextView.text = "b = " + pare.second.toString()
+                val input = inputIntEditText.text.toString().toInt()
+                if (input % 2 != 0 || input <= 0)  {
+                    val pair = factorize(input)
+                    aTextView.text = "a = " + pair.first.toString()
+                    bTextView.text = "b = " + pair.second.toString()
+                } else {
+                    aTextView.text = "Provide proper number"
+                    bTextView.text = ""
+                }
             }
         }
     }
